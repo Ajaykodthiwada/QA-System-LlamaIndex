@@ -1,6 +1,6 @@
 # 📄 Gemini-Powered RAG QA System
 
-An end-to-end **Retrieval-Augmented Generation (RAG)** system that allows users to upload documents and ask questions based on their content. The system uses **Google Gemini API**, **LlamaIndex**, and **FAISS** to deliver accurate, context-aware answers.
+An end-to-end **Retrieval-Augmented Generation (RAG)** system that allows users to upload PDF documents and ask questions based on their content. The system leverages **Google Gemini API**, **LlamaIndex**, and **FAISS** to deliver accurate, context-aware answers.
 
 ---
 
@@ -12,23 +12,24 @@ An end-to-end **Retrieval-Augmented Generation (RAG)** system that allows users 
 
 ## 📌 Features
 
-* 📄 Upload PDF documents
+* 📄 Upload and process PDF documents
 * 🔍 Semantic search using FAISS vector database
 * 🤖 Context-aware answer generation using Gemini LLM
-* ⚡ Fast and efficient retrieval with embeddings
-* 🔁 Retry mechanism for handling API rate limits
+* ⚡ Fast retrieval using embeddings
+* 🔁 Retry mechanism for API rate limits
 * 🌐 Deployed using Streamlit on Render
 
 ---
 
-## 🏗️ System Architecture
+## 🎯 How It Works
 
-1. Upload PDF
-2. Convert text into chunks
-3. Generate embeddings
-4. Store embeddings in FAISS
-5. Retrieve relevant chunks
-6. Generate answer using Gemini
+1. User uploads a PDF document
+2. Document is split into chunks
+3. Each chunk is converted into embeddings
+4. Embeddings are stored in FAISS vector database
+5. User asks a question
+6. Relevant chunks are retrieved
+7. Gemini LLM generates a final answer
 
 ---
 
@@ -62,9 +63,7 @@ pip install -r requirements.txt
 
 Create a `.env` file or set:
 
-```
 GOOGLE_API_KEY=your_api_key_here
-```
 
 ### 4️⃣ Run the Application
 
@@ -74,10 +73,19 @@ streamlit run StreamlitApp.py
 
 ---
 
-## 📸 Screenshots
+## 📸 Application Demo
 
+This system demonstrates real-time document-based question answering using Retrieval-Augmented Generation (RAG).
 
+### 🔹 Upload & Query Interface
 
+![Upload Interface](https://raw.githubusercontent.com/Ajaykodthiwada/QA-System-LlamaIndex/main/Screenshot%202026-04-01%20222152.png)
+
+---
+
+### 🔹 Answer Generation
+
+![Answer Output](https://raw.githubusercontent.com/Ajaykodthiwada/QA-System-LlamaIndex/main/Screenshot%202026-04-01%20222212.png)
 
 ---
 
@@ -106,6 +114,6 @@ streamlit run StreamlitApp.py
 
 ---
 
-## ⭐ If you like this project
+## ⭐ Support
 
-Give it a ⭐ on GitHub!
+If you like this project, give it a ⭐ on GitHub!
